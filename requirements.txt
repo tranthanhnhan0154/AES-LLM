@@ -1,0 +1,33 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+# Core Machine Learning & GPU (PyTorch 2.5.1 stable + CUDA 12.4)
+torch==2.5.1+cu124
+torchvision==0.20.1+cu124
+torchaudio==2.5.1+cu124
+xformers==0.0.35
+
+# Data Science & Utilities
+pandas
+scikit-learn
+matplotlib
+seaborn
+ipykernel
+python-dotenv
+fsspec<=2025.9.0
+
+# LangChain & Vector DB
+langchain
+langchain-community
+langchain-core
+chromadb
+
+# Hugging Face & RAG
+sentence-transformers
+transformers
+accelerate
+bitsandbytes
+datasets
+
+# Fine-tuning & Optimization
+unsloth
+trl

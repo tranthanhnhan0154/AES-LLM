@@ -1,0 +1,51 @@
+# ==============================================================================
+# GITIGNORE CHO DỰ ÁN AES_LLM (Llama-3.1-8B + RAG)
+# ==============================================================================
+
+# --- Môi trường ảo (Virtual Environment) ---
+.venv/
+venv/
+ENV/
+env/
+
+# --- Dữ liệu lớn (Datasets) ---
+# Không đưa dữ liệu đã xử lý (processed) lên GitHub
+data/processed/
+study_5/
+regen_dataset/
+
+# --- Trọng số mô hình và Checkpoints (Model Weights - Rất nặng) ---
+# Bỏ qua các LoRA adapters, checkpoints trong quá trình train và mô hình hợp nhất
+adapters/
+checkpoints/
+merged_model_4bit/
+merged_model_16bit/
+study_5/Llama_8b_*
+
+# --- Bộ nhớ đệm cục bộ (Caches) ---
+# Bỏ qua thư mục cache Hugging Face, Unsloth, Transformers
+.cache/
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# --- Tệp tin cấu hình cục bộ (Local Configurations) ---
+# Bỏ qua tệp cấu hình chứa đường dẫn cá nhân hoặc khóa bảo mật
+.env
+.env.local
+
+# --- Bộ đệm Python và Tệp tin biên dịch (Python cache) ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# --- Nhật ký và Báo cáo (Logs and Reports) ---
+*.log
+logs/
+
+# --- Hệ điều hành tự động sinh (OS generated files) ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
