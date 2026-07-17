@@ -5,18 +5,21 @@ from dotenv import load_dotenv
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 load_dotenv(os.path.join(BASE_DIR, ".env"))
 
+import torch
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 
 def load_vector_db(persist_directory, embedding_model_name="BAAI/bge-large-en-v1.5"):
     """
     Tải cơ sở dữ liệu vector ChromaDB từ thư mục lưu trữ cục bộ.
     Mô hình mặc định là BAAI/bge-large-en-v1.5 (context 512 tokens).
+    Tự động chọn CUDA nếu có, ngược lại sử dụng CPU.
     """
     if not os.path.exists(persist_directory):
         raise FileNotFoundError(f"Lỗi: Thư mục Vector DB tại '{persist_directory}' không tồn tại.")
         
-    model_kwargs = {"device": "cuda"}
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model_kwargs = {"device": device}
     embeddings = HuggingFaceEmbeddings(model_name=embedding_model_name, model_kwargs=model_kwargs)
     
     vectordb = Chroma(

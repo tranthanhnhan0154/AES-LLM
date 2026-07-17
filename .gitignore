@@ -16,11 +16,9 @@ regen_dataset/
 
 # --- Trọng số mô hình và Checkpoints (Model Weights - Rất nặng) ---
 # Bỏ qua các LoRA adapters, checkpoints trong quá trình train và mô hình hợp nhất
-adapters/
 checkpoints/
 merged_model_4bit/
 merged_model_16bit/
-study_5/Llama_8b_*
 
 # --- Bộ nhớ đệm cục bộ (Caches) ---
 # Bỏ qua thư mục cache Hugging Face, Unsloth, Transformers
