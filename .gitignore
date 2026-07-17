@@ -16,6 +16,7 @@ regen_dataset/
 
 # --- Trọng số mô hình và Checkpoints (Model Weights - Rất nặng) ---
 # Bỏ qua các LoRA adapters, checkpoints trong quá trình train và mô hình hợp nhất
+adapters/
 checkpoints/
 merged_model_4bit/
 merged_model_16bit/
