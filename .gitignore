@@ -47,3 +47,6 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 .DS_Store
+
+# Không version các file compile của Unsloth
+unsloth_compiled_cache/
