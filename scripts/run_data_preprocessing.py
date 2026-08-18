@@ -1,6 +1,7 @@
 import os
 import sys
-from dotenv import load_dotenv
+# pyrefly: ignore [missing-import]
+from dotenv import load_dotenv  
 
 # Tìm đường dẫn đến file .env ở thư mục gốc dự án và nạp
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

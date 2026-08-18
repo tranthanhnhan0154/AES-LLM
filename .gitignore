@@ -8,6 +8,7 @@ venv/
 ENV/
 env/
 
+
 # --- Dữ liệu lớn (Datasets) ---
 # Không đưa dữ liệu đã xử lý (processed) lên GitHub
 data/processed/
@@ -51,3 +52,16 @@ Desktop.ini
 
 # Không version các file compile của Unsloth
 unsloth_compiled_cache/
+
+# --- Thư mục mô hình hợp nhất mới ---
+merged_model_4bit_from_16bit/
+merged_model_4bit_from_16bit_gguf/
+merged_model_16bit_gguf/
+*.gguf
+
+# --- Tài liệu báo cáo & nghiên cứu (Research Papers & Reports) ---
+Bao_cao_Ke_hoach_AES_LLM.md
+
+# --- Tệp Notebook Colab phụ trợ ---
+notebooks/8_colab_lora_finetuning.ipynb
+
